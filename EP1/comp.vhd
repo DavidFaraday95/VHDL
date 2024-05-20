@@ -52,7 +52,8 @@ signal pix_y : std_logic_vector(9 downto 0) := (others => '0');
     vs : std_logic;
   
   -- Pixel colour
-  col : std_logic_vector (7 downto 0);
+    col : std_logic_vector (7 downto 0);
+
   end record t_vga;
   
   signal vga: t_vga;
