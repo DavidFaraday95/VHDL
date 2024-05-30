@@ -16,25 +16,25 @@ architecture Structural of half_adder is
   signal N1, N2, N3 : STD_LOGIC;
 
 begin
-  U1: entity nand_gate is
+  U1: entity nand_gate
   port map(
     A  => A;
     B  => B;
     Y  => N1
   );
-  U2: entity nand_gate is
+  U2: entity nand_gate
   port map(
     A  => A;
     B  => N1;
     Y  => N2
   );
-  U1: entity nand_gate is
+  U1: entity nand_gate
   port map(
     A  => A;
     B  => N1;
     Y  => N3
   );
-  U1: entity nand_gate is
+  U1: entity nand_gate
   port map(
     A  => N2;
     B  => N3;
