@@ -23,7 +23,7 @@ begin
   uut: nand_gate port map(
     A => atb;
     B => btb;
-    Y => ctb;
+    Y => ctb
   ):
 
   -- Stimulus process to simulate input signals
@@ -40,6 +40,6 @@ begin
       wait for 20ns;
       wait;  -- Wait forever; this will stop the simulaion
 
-  end process;
+  end process
 
 end architecture tb;
