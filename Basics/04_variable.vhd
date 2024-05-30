@@ -13,7 +13,7 @@ architecture counterup_2 of counterUp is
   variable o_temp_var : std_logic_vector (3 downto 0) := "0000";
 begin
    if (clk 'event and clk = '1') then
-     if (rest = '1') then
+      if (rest = '1') then
        o_temp_var := "0000";
       elsif (o_temp_var = "1111") then
         o_temp_var := "0000";
