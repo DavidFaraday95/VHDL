@@ -24,6 +24,6 @@ begin
     rst_tb <= '0'; -- De-Assert reset
     wait;
 
-  end process stimulus_process;
+  end process; -- stimulus_process
 
 end architecture Behavioral;
