@@ -20,26 +20,26 @@ begin
   port map(
     A  => A;
     B  => B;
-    Y  => N1;
+    Y  => N1
   );
   U2: entity nand_gate is
   port map(
     A  => A;
     B  => N1;
-    Y  => N2;
+    Y  => N2
   );
   U1: entity nand_gate is
   port map(
     A  => A;
     B  => N1;
-    Y  => N3;
+    Y  => N3
   );
   U1: entity nand_gate is
   port map(
     A  => N2;
     B  => N3;
-    Y  => SUM;
+    Y  => SUM
   );
 
-    CARRRY <= N1; 
+    Carry <= N1; 
 end Structural;
