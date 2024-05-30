@@ -1,7 +1,6 @@
 library IEEE; 
 Use ieee.std_logic_1164.all;
-Use ieee.std_logic_arith.all;
-Use ieee.std_logic_unsigned.all;
+Use ieee.numeric_std.all;
 
 entity counterUp is
   port ( rest, clk : in   std_logic;
@@ -15,7 +14,7 @@ begin
 
 process (clk)
 begin
-  if (clk' event and clk = '1')  then
+  if (rising_edge(clk)  then -- clk' event and clk = '1'
     if (rest = '1') then
       o_temp <= "0000";
     elsif (o_temp = "1111") then
@@ -23,9 +22,9 @@ begin
     else
       o_temp <= o_temp + '1';
     end if;
-  o <= o_temp;
   end if;
 end process;
 
-
+  o <= o_temp;
+      
 end counterUP_1;
