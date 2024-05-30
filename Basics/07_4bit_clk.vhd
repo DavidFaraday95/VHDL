@@ -23,9 +23,9 @@ begin
     else
       o_temp <= o_temp + '1';
     end if;
+  o <= o_temp;
   end if;
 end process;
 
-o <= o_temp;
 
 end counterUP_1;
