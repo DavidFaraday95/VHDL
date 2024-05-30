@@ -1,30 +1,32 @@
-library IEEE; 
-Use ieee.std_logic_1164.all;
-Use ieee.numeric_std.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity counterUp is
-  port ( rest, clk : in   std_logic;
-                o  : out  std_logic_vector(3 downto 0)
+  port (
+    rest : in  std_logic;
+    clk  : in  std_logic;
+    o    : out std_logic_vector(3 downto 0)
   );
-end counterUp
+end counterUp;
 
-architecture counterUP_1 of counterUp is 
-signal o_temp: std_logic_vector(3 downto 0) := "0000";
+architecture counterUP_1 of counterUp is
+  signal o_temp : std_logic_vector(3 downto 0) := "0000";
 begin
 
-process (clk)
-begin
-  if (rising_edge(clk)  then -- clk' event and clk = '1'
-    if (rest = '1') then
-      o_temp <= "0000";
-    elsif (o_temp = "1111") then
-      o_temp <= "0000";
-    else
-      o_temp <= o_temp + '1';
+  process (clk)
+  begin
+    if rising_edge(clk) then
+      if rest = '1' then
+        o_temp <= "0000";
+      elsif o_temp = "1111" then
+        o_temp <= "0000";
+      else
+        o_temp <= std_logic_vector(unsigned(o_temp) + 1);
+      end if;
     end if;
-  end if;
-end process;
+  end process;
 
   o <= o_temp;
-      
+
 end counterUP_1;
