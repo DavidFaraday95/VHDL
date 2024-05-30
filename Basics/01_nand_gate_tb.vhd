@@ -9,7 +9,7 @@ architecture tb of nand_tb is
   -- Component Declaration for the Unit Under Test (UUT)
   component nand_gate port (
     A, B : in std_logic;
-    Y : out std_logic;
+    Y : out std_logic
   );
   end component;
 
@@ -40,6 +40,6 @@ begin
       wait for 20ns;
       wait;  -- Wait forever; this will stop the simulaion
 
-  end process stimulus_process;
+  end process;
 
 end architecture tb;
