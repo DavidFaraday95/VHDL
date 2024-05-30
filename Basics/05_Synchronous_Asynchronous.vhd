@@ -12,6 +12,7 @@ end D_FLIPFLOP;
           Q = '0';
         else
           Q =  D;
+        end if;
       end if;
 
 
@@ -19,10 +20,10 @@ end D_FLIPFLOP;
 --     begin
 --       if (rest = '1') then
 --         Q <= '0';
---       elsif(clk' event and clk = '1') then
+--       elsif (clk' event and clk = '1') then
 --         Q <= D;
 --       end if;
 
     end process;
 
-end architecture Behavioral_FlipFlop_Mode;
+end Behavioral_FlipFlop_Mode;
