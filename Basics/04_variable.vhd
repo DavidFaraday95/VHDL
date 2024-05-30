@@ -22,7 +22,7 @@ begin
       end if;
 
       o <= o_temp_var;
-  end if;
+    end if;
 end process;
 
 end counterup_2
