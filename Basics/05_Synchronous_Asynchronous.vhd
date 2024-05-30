@@ -2,10 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity D_FLIPFLOP is 
-  port (
-  ):
-
-  end D_FLIPFLOP;
+end D_FLIPFLOP;
 
   architecture Behavioral_FlipFlop_Mode of D_FLIPFLOP is
     process (clk) -- synchronous
@@ -15,7 +12,6 @@ entity D_FLIPFLOP is
           Q = '0';
         else
           Q =  D;
-        end if;
       end if;
 
 
