@@ -10,6 +10,9 @@ entity counterUp is
   end counterUp
        
 architecture counterup_2 of counterUp is 
+begin
+
+process (clk)
   variable o_temp_var : std_logic_vector (3 downto 0) := "0000";
 begin
     if (clk 'event and clk = '1') then
@@ -22,6 +25,7 @@ begin
       end if;
       o <= o_temp_var;
     end if;
+end process;
       
 end counterup_2
         
