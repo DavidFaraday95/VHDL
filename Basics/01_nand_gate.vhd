@@ -5,7 +5,7 @@ entity nand_gate is
   port (
     A : in std_logic;
     B : in std_logic;
-    Y : out std_logic;
+    Y : out std_logic
   );
 
   end nand_gate;
