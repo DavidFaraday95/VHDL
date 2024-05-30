@@ -44,4 +44,4 @@ BEGIN
     when "10" => y_mux4 <= c;
     when others => y_mux4 <= d;
   
-END mux_implementation;
+END architecture mux_implementation;
